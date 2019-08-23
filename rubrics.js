@@ -44,7 +44,6 @@ function createModeratelySkilled(original) {
 }
 
 function createTryAgain(original) {
-    console.log('test');
     let pos = original.indexOf('tudent') + 7;
     let trimmed = trimCriteria(original);
     let verbEndPos = trimmed.indexOf(' ', pos);
@@ -56,7 +55,6 @@ function createTryAgain(original) {
 }
 
 function attachRowSorter() {
-    console.log('test 1');
     $('table.rubric_table tbody').sortable();
     $('tbody.ui-sortable').children('tr').each(function(element) {
         let toolList = $(this).find('td.criterion_description div.editing');
