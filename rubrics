@@ -1,22 +1,3 @@
-// ==UserScript==
-// @name Canvas Rubric Sort
-// @namespace https://btech.instructure.com
-// @version 1
-// @description Injects the RowSorter.js jQuery library into Rubric Pages on Canvas
-// @match https://btech.instructure.com/*/*/rubrics/*
-// @match https://btech.instructure.com/courses/*/assignments/*
-// @match https://btech.test.instructure.com/courses/*/rubrics/*
-// @match https://btech.beta.instructure.com/courses/*/rubrics/*
-// @require https://gist.github.com/raw/2625891/waitForKeyElements.js
-// @require https://raw.githubusercontent.com/arteyazilim/rowsorter/master/src/RowSorter.js
-// ==/UserScript==
-
-waitForKeyElements('#add_learning_outcome_link', attachRowSorter);
-function fillRatings() {
-    console.log('it works!');
-}
-let test = "Student cleaned the knife.";
-createSkilled(test);
 function pastToPresent(verb) {
     let newVerb = '';
     let vowels = ['a', 'e', 'i', 'o', 'u'];
