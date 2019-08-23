@@ -44,6 +44,7 @@ function createModeratelySkilled(original) {
 }
 
 function createTryAgain(original) {
+    console.log('test');
     let pos = original.indexOf('tudent') + 7;
     let trimmed = trimCriteria(original);
     let verbEndPos = trimmed.indexOf(' ', pos);
