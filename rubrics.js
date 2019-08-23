@@ -64,21 +64,23 @@ function attachRowSorter() {
         toolList.find('.fill_ratings').click({parent: this, criteria: criteriaDescription}, function(event) {
             let parent = event.data.parent;
             let criteriaDescription = event.data.criteria;
-            if (criteriaDescription.indexOf(' ') === -1) {
-                criteriaDescription = 'Student did a task';
+            if (criteriaDescription.indexOf(' ') === -1 || criteriaDescription === "Description of criterion") {
+                criteriaDescription = "Student did a task";
                 $(parent).find('td.criterion_description span.description_title').text(criteriaDescription);
             }
-            let cells = $(parent).find('table.ratings').find("td");
-            let skilled = cells.get(0);
-            $(skilled).find('.rating_long_description').text(createSkilled(criteriaDescription));
-            $(skilled).find('.rating_description_value').text("Skilled");
-            let moderatelySkilled = cells.get(1);
-            $(moderatelySkilled).find('.rating_long_description').text(createModeratelySkilled(criteriaDescription));
-            $(moderatelySkilled).find('.rating_description_value').text("Moderately Skilled");
-            if (cells.get(2) !== undefined) {
-                let tryAgain = cells.get(2);
-                $(tryAgain).find('.rating_long_description').text(createTryAgain(criteriaDescription));
-                $(tryAgain).find('.rating_description_value').text("Try Again");
+            if (criteriaDescription.indexOf('tudent') < criteriaDescription.indexOf(' ')) {
+                let cells = $(parent).find('table.ratings').find("td");
+                let skilled = cells.get(0);
+                $(skilled).find('.rating_long_description').text(createSkilled(criteriaDescription));
+                $(skilled).find('.rating_description_value').text("Skilled");
+                let moderatelySkilled = cells.get(1);
+                $(moderatelySkilled).find('.rating_long_description').text(createModeratelySkilled(criteriaDescription));
+                $(moderatelySkilled).find('.rating_description_value').text("Moderately Skilled");
+                if (cells.get(2) !== undefined) {
+                    let tryAgain = cells.get(2);
+                    $(tryAgain).find('.rating_long_description').text(createTryAgain(criteriaDescription));
+                    $(tryAgain).find('.rating_description_value').text("Try Again");
+                }
             }
         });
     });
