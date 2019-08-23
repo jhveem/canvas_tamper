@@ -79,6 +79,7 @@ function attachRowSorter() {
                 $(moderatelySkilled).find('.rating_description_value').text("Moderately Skilled");
                 if (cells.get(2) !== undefined) {
                     let tryAgain = cells.get(2);
+                    console.log('test 1');
                     $(tryAgain).find('.rating_long_description').text(createTryAgain(criteriaDescription));
                     $(tryAgain).find('.rating_description_value').text("Try Again");
                 }
