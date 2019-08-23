@@ -1,4 +1,4 @@
-function pastToPresent(verb) {
+export function pastToPresent(verb) {
     let newVerb = '';
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     if (verb === 'did') {
@@ -17,22 +17,22 @@ function pastToPresent(verb) {
     return newVerb;
 }
 
-function trimCriteria(criteria) {
+export function trimCriteria(criteria) {
     criteria = criteria.replace(" properly","");
     criteria = criteria.replace(" correctly","");
     return criteria;
 }
 
-function getVerb(pos) {
+export function getVerb(pos) {
 }
 
-function createSkilled(original) {
+export function createSkilled(original) {
     let pos = original.indexOf('tudent') + 7;
     let output = [original.slice(0, pos), 'correctly ', original.slice(pos)].join('');
     output = original;
     return output;
 }
-function createModeratelySkilled(original) {
+export function createModeratelySkilled(original) {
     let pos = original.indexOf('tudent') + 7;
     let trimmed = trimCriteria(original);
     let verbEndPos = trimmed.indexOf(' ', pos);
@@ -43,7 +43,7 @@ function createModeratelySkilled(original) {
     return output;
 }
 
-function createTryAgain(original) {
+export function createTryAgain(original) {
     let pos = 8;
     let trimmed = trimCriteria(original);
     let verbEndPos = trimmed.indexOf(' ', pos);
@@ -54,7 +54,7 @@ function createTryAgain(original) {
     return output;
 }
 
-function attachRowSorter() {
+export function attachRowSorter() {
     $('table.rubric_table tbody').sortable();
     $('tbody.ui-sortable').children('tr').each(function(element) {
         let toolList = $(this).find('td.criterion_description div.editing');
