@@ -3,6 +3,8 @@ function pastToPresent(verb) {
     let vowels = ['a', 'e', 'i', 'o', 'u'];
     if (verb === 'did') {
         newVerb = 'do';
+    } else if (verb ==='took') {
+        newVerb = 'take';
     } else {
         newVerb = verb.replace("ed", "");
         if (newVerb !== verb) {
