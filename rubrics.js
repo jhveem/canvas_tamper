@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Canvas Rubric Sort
 // @namespace https://btech.instructure.com
-// @version 1
+// @version 1.1
 // @description Injects the RowSorter.js jQuery library into Rubric Pages on Canvas
 // @match https://btech.instructure.com/*/*/rubrics/*
 // @match https://btech.instructure.com/*/*/rubrics
