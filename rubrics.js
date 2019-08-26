@@ -56,7 +56,7 @@ function createTryAgain(original) {
     return output;
 }
 
-export function attachRowSorter() {
+function attachRowSorter() {
     $('table.rubric_table tbody').sortable();
     $('tbody.ui-sortable').children('tr').each(function(element) {
         let toolList = $(this).find('td.criterion_description div.editing');
