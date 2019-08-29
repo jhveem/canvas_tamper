@@ -54,7 +54,7 @@ function createModeratelySkilled(original) {
     let verb = trimmed.substring(pos, verbEndPos);
     let newVerb = pastToPresent(verb);
     trimmed = trimmed.replace(verb, newVerb);
-    let output = [trimmed.slice(0, pos), 'needed help to ', trimmed.slice(pos)].join('');
+    let output = [trimmed.slice(0, pos), 'needed some prompting to ', trimmed.slice(pos)].join('');
     return output;
 }
 
