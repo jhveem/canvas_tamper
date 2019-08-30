@@ -2,7 +2,7 @@
 // @name Canvas Test
 // @namespace https://btech.instructure.com
 // @match https://btech.instructure.com/*
-// @version 1
+// @version 1.1
 // @description Test for implementing in canvas custom JS.
 // ==/UserScript==
 
@@ -45,7 +45,8 @@ if (window.location.pathname.includes('rubric') || window.location.pathname.incl
 
 }
 
-/*------sticky side menu (left and right)------*/
+/*------css stuff------*/
+/*
 $('#left-side').css({
     "position": "fixed",
     "top": "108px",
@@ -57,3 +58,4 @@ $('#right-side-wrapper').css({
     "position": "sticky",
     "top": "0"
 });
+*/
